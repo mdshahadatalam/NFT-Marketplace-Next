@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import aniImg from '@/public/ani.gif';
 import Image from "next/image";

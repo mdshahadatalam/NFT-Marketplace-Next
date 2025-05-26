@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import tranding from '@/public/tran/tranding (2).png';
 import tranding2 from '@/public/tran/tranding (3).png';
