@@ -7,6 +7,7 @@ import Tranding from "./Component/Tranding";
 import TopCreator from "./Component/TopCreator";
 import Catagoris from "./Component/Catagoris";
 import Discover from "./Component/Discover";
+import Magic from "./Component/Magic";
 export const metadata = {
   title: "Home",
   description: "This is a home page",
@@ -21,6 +22,7 @@ export default function Home() {
      <TopCreator/>
      <Catagoris/>
      <Discover/>
+     <Magic/>
      </>
   );
 }

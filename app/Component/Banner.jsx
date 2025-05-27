@@ -56,7 +56,7 @@ export default function Banner() {
         <Image
           src={aniImg}
           alt="ani"
-          className="w-full h-auto object-cover max-w-full"
+          className="w-full h-auto object-cover max-w-full shadow-md"
         />
       </div>
     </div>

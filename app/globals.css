@@ -3,3 +3,10 @@
 @tailwind utilities;
 
 
+.backImage{
+    background-image: url(../public/bg/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* height: 700px; */
+}
