@@ -20,7 +20,7 @@ export default function Navbar() {
             <Image src={logo} alt="logo" className=""/>
 
             {/* nav menus */}
-            <ul className="items-center gap-[20px] text-[1rem] text-[#FFFFFF] md:flex hidden ms-auto mt-1 ">
+            <ul className="items-center gap-[20px] text-[16px] text-[#FFFFFF] md:flex hidden ms-auto mt-1 ">
                 <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Marketplace</li>
                 <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Rankings</li>
                 <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Connect a wallet</li>
