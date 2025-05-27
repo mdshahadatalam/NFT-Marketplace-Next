@@ -27,10 +27,10 @@ export default function Navbar() {
 
 
                   <div>
-                  <button className="rounded-[20px] px-[25px] w-[142px] h-[60px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
+                  <a href="/createdAccount" className=" no-underline rounded-[20px] px-[25px] w-[142px] h-[60px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
                     <span><PiUserBold /></span>
                     Sign Up
-                    </button>
+                    </a>
 
                   </div>
                   
