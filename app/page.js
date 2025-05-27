@@ -9,6 +9,7 @@ import Catagoris from "./Component/Catagoris";
 import Discover from "./Component/Discover";
 import Magic from "./Component/Magic";
 import Work from "./Component/Work";
+import Join from "./Component/Join";
 export const metadata = {
   title: "Home",
   description: "This is a home page",
@@ -25,6 +26,7 @@ export default function Home() {
      <Discover/>
      <Magic/>
      <Work/>
+     <Join/>
      </>
   );
 }
