@@ -4,7 +4,7 @@ import photo from "@/public/join/Photo.png"
 export default function Join() {
   return (
     <>
-     <section className="bg-[#2B2B2B] py-12">
+<section className="bg-[#2B2B2B] py-12">
   <div className="container bg-[#3B3B3B] p-6 md:p-9 rounded-[20px] shadow-lg">
     <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-8">
       
