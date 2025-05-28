@@ -4,6 +4,16 @@ import React, { useEffect, useState } from 'react'
 import avatar from "@/public/NFT/Avatar (2).png"
 import { TbWorld } from "react-icons/tb";
 
+import NFTImg1 from "@/public/NFT/NFT (1).png"
+import NFTImg2 from "@/public/NFT/NFT (2).png"
+import NFTImg3 from "@/public/NFT/NFT (3).png"
+import NFTImg4 from "@/public/NFT/NFT (4).png"
+import NFTImg5 from "@/public/NFT/NFT (5).png"
+import NFTImg7 from "@/public/NFT/NFT (7).png"
+import NFTImg8 from "@/public/NFT/NFT (8).png"
+import NFTImg9 from "@/public/NFT/NFT (9).png"
+import NFTImg10 from "@/public/NFT/NFT (10).png"
+
 
 export default function NFT({ targetHour = 18, targetMinute = 0 }) {
 
@@ -142,6 +152,250 @@ export default function NFT({ targetHour = 18, targetMinute = 0 }) {
         </div>
       </div>
     </section>
+
+                 {/* NFT more card  */}
+           <section className='bg-[#3B3B3B] py-12'>
+                   <div className="container mx-auto">
+                  
+                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {/* Card 1 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg9} alt="Art Category" className="w-full h-auto object-cover" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Foxy Life
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    {/* Card 2 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg8} alt="Collectibles Category" className="w-full h-auto object-cover" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Cat from future
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    {/* Card 3 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg7} alt="Art Category" className="w-full h-auto object-cover" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Psycho Dog
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+       
+                        {/* Card 4 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg2} alt="Art Category" className="w-full h-auto object-cover" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Designer Bear
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    {/* Card 5 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg1} alt="Collectibles Category" className="w-full h-auto object-cover" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Dancing Robot 0375
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    {/* Card 6 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg10} alt="Art Category" className="w-full h-auto object-cover" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Dancing Robot 0356
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+       
+                            {/* Card 7 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg5} alt="Art Category" className="w-full h-auto object-cover" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Dancing Robot 0321
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    {/* Card 8 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg4} alt="Collectibles Category" className="w-full h-auto object-cover" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Dancing Robot 0512
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    {/* Card 9 */}
+                    <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+                      <Image src={NFTImg3} alt="Art Category" className="w-full h-auto" />
+                      <div className="bg-[#3B3B3B] p-4">
+                        <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
+                          Dancing Robot 0024 
+                        </h4>
+                  
+                        <div className="flex items-center gap-2 mb-4">
+                          <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                          <span className="font-normal text-[16px] text-white font-mono">Orbitian</span>
+                        </div>
+                  
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Price</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">1.63 ETH</h5>
+                          </div>
+                          <div>
+                            <span className="text-[12px] text-[#858584] font-mono">Highest Bid</span>
+                            <h5 className="text-[16px] text-white font-normal font-mono">0.33 wETH</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+       
+                  </div>
+          
+               </div>
+       </section>
     </>
   )
 }

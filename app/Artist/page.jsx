@@ -98,10 +98,10 @@ export default function Artist() {
        </section>
 
         {/* discover more NFTs */}
-            <section className='bg-[#3B3B3B] py-12'>
-                   <div className="container mx-auto">
+        <section className='bg-[#3B3B3B] py-12'>
+            <div className="container mx-auto">
            
-                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
              {/* Card 1 */}
              <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
                <Image src={discover} alt="Art Category" className="w-full h-auto object-cover" />
