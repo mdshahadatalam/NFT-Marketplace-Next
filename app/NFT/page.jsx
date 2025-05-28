@@ -13,6 +13,8 @@ import NFTImg7 from "@/public/NFT/NFT (7).png"
 import NFTImg8 from "@/public/NFT/NFT (8).png"
 import NFTImg9 from "@/public/NFT/NFT (9).png"
 import NFTImg10 from "@/public/NFT/NFT (10).png"
+import { IoIosArrowRoundForward } from "react-icons/io";
+
 
 
 export default function NFT({ targetHour = 18, targetMinute = 0 }) {
@@ -156,6 +158,17 @@ export default function NFT({ targetHour = 18, targetMinute = 0 }) {
                  {/* NFT more card  */}
            <section className='bg-[#3B3B3B] py-12'>
                    <div className="container mx-auto">
+
+                    <div  className="mb-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+                    <div>
+                      <h2 className="font-semibold text-[28px] sm:text-[32px] lg:text-[38px] leading-[120%] capitalize text-white">More from this artist</h2>
+                   </div>
+                                
+                <button className="rounded-[20px] px-8 font-mono w-full sm:w-auto h-14 font-semibold text-[16px] text-white border-2 border-[#A259FF] flex items-center justify-center gap-2 hover:bg-[#A259FF] transition-all duration-300">
+                <span className="text-xl"><IoIosArrowRoundForward /></span>
+                    Go To Artist Page
+                </button>
+            </div>
                   
                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Card 1 */}

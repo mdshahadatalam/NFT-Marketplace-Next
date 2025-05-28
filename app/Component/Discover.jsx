@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import discover from "@/public/discover/discover (2).png"
@@ -11,8 +12,19 @@ import avatar2 from "@/public/discover/Avatar (2).png"
 import avatar3 from "@/public/discover/Avatar (3).png"
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function Discover() {
+  const route = useRouter()
+
+   const handleNFT = () => {
+    route.push('/NFT#scrollTarge')
+  };
+
+  const handleMarketPlace =()=>{
+    route.push('/MarketPlace')
+  }
+
   return (
     <>
        <section className='bg-[#2B2B2B] py-12'>
@@ -23,7 +35,7 @@ export default function Discover() {
                     <p className="font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[160%] capitalize text-white mt-2">Explore new trending NFTs</p>
                   </div>
             
-                  <button className="rounded-[20px] px-8 font-mono w-full sm:w-auto h-14 font-semibold text-[16px] text-white border-2 border-[#A259FF] flex items-center justify-center gap-2 hover:bg-[#A259FF] transition-all duration-300">
+                  <button onClick={handleMarketPlace} className="rounded-[20px] px-8 font-mono w-full sm:w-auto h-14 font-semibold text-[16px] text-white border-2 border-[#A259FF] flex items-center justify-center gap-2 hover:bg-[#A259FF] transition-all duration-300">
                     <span className="text-xl">
                       <MdOutlineRemoveRedEye />
                     </span>
@@ -33,7 +45,7 @@ export default function Discover() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {/* Card 1 */}
-  <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
+  <div onClick={handleNFT} className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
     <Image src={discover} alt="Art Category" className="w-full h-auto object-cover" />
     <div className="bg-[#3B3B3B] p-4">
       <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
@@ -59,7 +71,7 @@ export default function Discover() {
   </div>
 
   {/* Card 2 */}
-  <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
+  <div onClick={handleNFT} className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
     <Image src={discover2} alt="Collectibles Category" className="w-full h-auto object-cover" />
     <div className="bg-[#3B3B3B] p-4">
       <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
@@ -85,7 +97,7 @@ export default function Discover() {
   </div>
 
   {/* Card 3 */}
-  <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
+  <div onClick={handleNFT} className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
     <Image src={discover3} alt="Art Category" className="w-full h-auto object-cover" />
     <div className="bg-[#3B3B3B] p-4">
       <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
