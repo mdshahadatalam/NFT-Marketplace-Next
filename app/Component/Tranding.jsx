@@ -21,8 +21,17 @@ import avatar2 from '@/public/tran/Avatar (2).png';
 
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function Tranding() {
+  const route = useRouter()
+
+  const handleNFT =()=>{
+      route.push('/NFT')
+  }
+  const handleArtist =()=>{
+    route.push('/Artist')
+  }
   return (
     <>
        {/* <section className='bg-[#2B2B2B]'>
@@ -136,63 +145,87 @@ export default function Tranding() {
 
       {/* Card 1 */}
       <div className="w-full lg:w-4/12">
-        <Image src={tranding} alt="Trending 1" className="w-full h-auto object-cover rounded-xl  transform transition duration-300 hover:scale-105 cursor-pointer " />
+        <Image
+         onClick={handleNFT}
+          src={tranding} alt="Trending 1" className="w-full h-auto object-cover rounded-xl  transform transition duration-300 hover:scale-105 cursor-pointer " />
         
         <div className="flex flex-row gap-2 mt-4">
-          <Image src={smallTrn} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
-          <Image src={smallTrn3} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
-          <Image src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+           onClick={handleNFT}
+           src={smallTrn} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+           onClick={handleNFT}
+           src={smallTrn3} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+           onClick={handleNFT}
+           src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
         </div>
 
         <div className="mt-3">
           <h3 className="font-semibold text-[20px] lg:text-[22px] leading-[140%] capitalize text-white">
             DSGN Animals
           </h3>
-          <div className="flex items-center gap-2 mt-2">
+          <div onClick={handleArtist} className="flex items-center gap-2 mt-2">
             <Image src={foxImg} alt="MrFox" className="w-6 h-6 rounded-full object-cover  transform transition duration-300 hover:scale-105 cursor-pointer" />
-            <span className="font-normal text-[16px] leading-[140%] text-white">MrFox</span>
+            <span className="font-normal text-[16px] leading-[140%] text-white cursor-pointer">MrFox</span>
           </div>
         </div>
       </div>
 
       {/* Card 2 */}
       <div className="w-full lg:w-4/12">
-        <Image src={tranding2} alt="Trending 2" className="w-full h-auto object-cover rounded-xl  transform transition duration-300 hover:scale-105 cursor-pointer" />
+        <Image
+        onClick={handleNFT}
+         src={tranding2} alt="Trending 2" className="w-full h-auto object-cover rounded-xl  transform transition duration-300 hover:scale-105 cursor-pointer" />
 
         <div className="flex flex-row gap-2 mt-4">
-          <Image src={masrom1} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
-          <Image src={masrom2} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
-          <Image src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+            onClick={handleNFT}
+           src={masrom1} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+            onClick={handleNFT}
+           src={masrom2} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+            onClick={handleNFT}
+           src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
         </div>
 
         <div className="mt-3">
           <h3 className="font-semibold text-[20px] lg:text-[22px] leading-[140%] capitalize text-white">
             Magic Mushrooms
           </h3>
-          <div className="flex items-center gap-2 mt-2">
+          <div onClick={handleArtist} className="flex items-center gap-2 mt-2">
             <Image src={avatar2} alt="Shroomie" className="w-6 h-6 rounded-full object-cover  transform transition duration-300 hover:scale-105 cursor-pointer" />
-            <span className="font-normal text-[16px] leading-[140%] text-white">Shroomie</span>
+            <span className="font-normal text-[16px] leading-[140%] text-white cursor-pointer">Shroomie</span>
           </div>
         </div>
       </div>
 
       {/* Card 3 */}
       <div className="w-full lg:w-4/12">
-        <Image src={tranding3} alt="Trending 3" className="w-full h-auto object-cover rounded-xl  transform transition duration-300 hover:scale-105 cursor-pointer" />
+        <Image
+        onClick={handleNFT}
+         src={tranding3} alt="Trending 3" className="w-full h-auto object-cover rounded-xl  transform transition duration-300 hover:scale-105 cursor-pointer" />
 
         <div className="flex flex-row gap-2 mt-4">
-          <Image src={robot1} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
-          <Image src={robot2} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
-          <Image src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+            onClick={handleNFT}
+           src={robot1} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+            onClick={handleNFT}
+           src={robot2} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
+          <Image
+            onClick={handleNFT}
+           src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
         </div>
 
         <div className="mt-3">
           <h3 className="font-semibold text-[20px] lg:text-[22px] leading-[140%] capitalize text-white">
             Disco Machines
           </h3>
-          <div className="flex items-center gap-2 mt-2">
+          <div onClick={handleArtist} className="flex items-center gap-2 mt-2">
             <Image src={avatar1} alt="BeKind2Robots" className="w-6 h-6 rounded-full object-cover  transform transition duration-300 hover:scale-105 cursor-pointer" />
-            <span className="font-normal text-[16px] leading-[140%] text-white">BeKind2Robots</span>
+            <span className="font-normal text-[16px] leading-[140%] text-white cursor-pointer">BeKind2Robots</span>
           </div>
         </div>
       </div>

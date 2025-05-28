@@ -3,9 +3,20 @@ import React from 'react'
 import aniImg from '@/public/ani.gif';
 import Image from "next/image";
 import { PiRocketLaunchLight } from "react-icons/pi";
+import { useRouter } from 'next/navigation';
 
 
 export default function Banner() {
+
+ const route = useRouter()
+
+  const handleArtist =()=>{
+       route.push('/Artist')
+  }
+  const handleSignUp =()=>{
+    route.push('/createdAccount')
+  }
+
   return (
     <>
 <section className="bg-[#2B2B2B] py-[100px]">
@@ -24,7 +35,7 @@ export default function Banner() {
 
         {/* Button */}
         <div className="mt-4">
-          <button className="font-semibold text-[16px] leading-[140%] text-center bg-[#a259ff] rounded-[20px] px-[40px] sm:px-[50px] py-[10px] w-full sm:w-[224px] h-[60px] text-white font-sans tracking-wide flex items-center justify-center gap-2 hover:bg-[#8a40e8] transform transition duration-300 hover:scale-105">
+          <button onClick={handleSignUp} className="font-semibold text-[16px] leading-[140%] text-center bg-[#a259ff] rounded-[20px] px-[40px] sm:px-[50px] py-[10px] w-full sm:w-[224px] h-[60px] text-white font-sans tracking-wide flex items-center justify-center gap-2 hover:bg-[#8a40e8] transform transition duration-300 hover:scale-105">
             <span className="text-2xl font-medium">
               <PiRocketLaunchLight />
             </span>
@@ -54,9 +65,10 @@ export default function Banner() {
       {/* Right content: image */}
       <div className="w-full lg:w-7/12 flex justify-center items-center">
         <Image
+          onClick={handleArtist}
           src={aniImg}
           alt="ani"
-          className="w-full h-auto object-cover max-w-full shadow-md"
+          className="w-full h-auto object-cover max-w-full shadow-md cursor-pointer"
         />
       </div>
     </div>

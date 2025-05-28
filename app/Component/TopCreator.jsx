@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import React from 'react'
 import { PiRocketLaunchDuotone } from "react-icons/pi";
@@ -15,8 +16,13 @@ import profile9 from "@/public/profile/profile (9).png";
 import profile10 from "@/public/profile/profile (10).png";
 import profile11 from "@/public/profile/profile (11).png";
 import profile12 from "@/public/profile/profile (12).png";
+import { useRouter } from 'next/navigation';
 
 export default function TopCreator() {
+  const route = useRouter()
+  const handleArtist = ()=>{
+       route.push('/Artist')
+  }
   return (
     <>
     
@@ -44,7 +50,7 @@ export default function TopCreator() {
     {/* Creator Cards */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {/* Card 1 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile1} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -58,7 +64,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 2 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile2} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -72,7 +78,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 3 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile3} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -86,7 +92,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 4 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile4} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -103,7 +109,7 @@ export default function TopCreator() {
 
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {/* Card 5 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile5} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -117,7 +123,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 6 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile6} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -131,7 +137,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 7 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile7} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -145,7 +151,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 8 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile8} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -162,7 +168,7 @@ export default function TopCreator() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {/* Card 5 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile9} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -176,7 +182,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 6 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile10} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -190,7 +196,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 7 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile11} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
@@ -204,7 +210,7 @@ export default function TopCreator() {
       </div>
 
       {/* Card 8 */}
-      <div className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
+      <div onClick={handleArtist} className="bg-[#3B3B3B] rounded-[20px] shadow-md text-center py-6 relative transform transition duration-300 hover:scale-105 cursor-pointer mt-4">
         <div className="flex justify-center mb-4">
           <Image src={profile12} alt="profile Image" className="rounded-full w-24 h-24 object-cover" />
         </div>
