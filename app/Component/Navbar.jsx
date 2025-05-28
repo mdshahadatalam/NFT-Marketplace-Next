@@ -17,6 +17,10 @@ export default function Navbar() {
       const handleSignUp = ()=>{
            route.push('/createdAccount')
       }
+
+      const handleHome =()=>{
+        route.push('/')
+      }
   return (
      <>
        <section className="bg-[#2B2B2B] py-2">
@@ -24,7 +28,7 @@ export default function Navbar() {
                 <nav className="flex items-center justify-between w-full relative">
 
             {/* logo */}
-            <Image src={logo} alt="logo" className=""/>
+            <Image onClick={handleHome} src={logo} alt="logo" className="cursor-pointer"/>
 
             {/* nav menus */}
             <ul className="items-center gap-[20px] text-[16px] text-[#FFFFFF] md:flex hidden ms-auto mt-1 ">
