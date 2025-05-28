@@ -31,10 +31,10 @@ export default function Discover() {
                   </button>
                 </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {/* Card 1 */}
   <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
-    <Image src={discover} alt="Art Category" className=" object-cover" />
+    <Image src={discover} alt="Art Category" className="w-full h-auto object-cover" />
     <div className="bg-[#3B3B3B] p-4">
       <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
         Distant Galaxy
@@ -60,7 +60,7 @@ export default function Discover() {
 
   {/* Card 2 */}
   <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
-    <Image src={discover2} alt="Collectibles Category" className=" object-cover" />
+    <Image src={discover2} alt="Collectibles Category" className="w-full h-auto object-cover" />
     <div className="bg-[#3B3B3B] p-4">
       <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
         Distant Galaxy
@@ -86,7 +86,7 @@ export default function Discover() {
 
   {/* Card 3 */}
   <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-[#2e2e2e] transform transition duration-300 hover:scale-105 cursor-pointer">
-    <Image src={discover3} alt="Art Category" className=" object-cover" />
+    <Image src={discover3} alt="Art Category" className="w-full h-auto object-cover" />
     <div className="bg-[#3B3B3B] p-4">
       <h4 className="font-semibold text-[22px] leading-[140%] capitalize text-white font-mono mb-2">
         Distant Galaxy

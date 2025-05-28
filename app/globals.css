@@ -10,3 +10,11 @@
     background-size: cover;
     /* height: 700px; */
 }
+
+.artistBg{
+   background-image: url(../public/artist/bgartist\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;  
+}

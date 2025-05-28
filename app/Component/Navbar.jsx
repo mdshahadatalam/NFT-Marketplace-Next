@@ -6,10 +6,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../public/logo.png';
 import Image from "next/image";
 import { PiUserBold } from "react-icons/pi";
+import { useRouter } from "next/navigation";
+
 
 
 export default function Navbar() {
       const [isMenuOpen, setIsMenuOpen] = useState(false)
+      const route = useRouter()
+
+      const handleSignUp = ()=>{
+           route.push('/createdAccount')
+      }
   return (
      <>
        <section className="bg-[#2B2B2B] py-2">
@@ -27,10 +34,10 @@ export default function Navbar() {
 
 
                   <div>
-                  <a href="/createdAccount" className=" no-underline rounded-[20px] px-[25px] w-[142px] h-[60px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
+                  <button onClick={handleSignUp} className="rounded-[20px] px-[25px] w-[142px] h-[60px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
                     <span><PiUserBold /></span>
                     Sign Up
-                    </a>
+                    </button>
 
                   </div>
                   

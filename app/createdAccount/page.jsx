@@ -5,8 +5,8 @@ import image from "@/public/signUp/Image.png"
 export default function createdAccount() {
   return (
     <>
-      <section className='bg-[#2B2B2B] py-12'>
-  <div className="container mx-auto px-4">
+  <section className='bg-[#2B2B2B] py-12'>
+  <div className="container mx-auto px-4 shadow-lg rounded-md bg-[#3B3B3B] p-4 lg:p-8">
     <div className='flex flex-col lg:flex-row gap-12 lg:gap-8 items-start lg:items-center justify-center'>
 
       {/* Image Section */}
