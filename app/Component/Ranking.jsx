@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import ranking1 from "@/public/ranking/raking (1).png"
@@ -18,8 +19,13 @@ import ranking15 from "@/public/ranking/raking (15).png"
 import ranking16 from "@/public/ranking/raking (16).png"
 import ranking17 from "@/public/ranking/raking (17).png"
 import ranking18 from "@/public/ranking/raking (18).png"
+import { useRouter } from 'next/navigation'
 
 export default function Ranking() {
+const route = useRouter()
+  const handleArtist =()=>{
+          route.push('/Artist')
+  }
   return (
     <>
     <section className="bg-[#2B2B2B] py-28">
@@ -53,8 +59,8 @@ export default function Ranking() {
     </div>
 
     {/* Ranking Row 1*/}
-    <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+    <div  className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           1
         </span>
@@ -72,13 +78,13 @@ export default function Ranking() {
     </div>
       
       {/* Ranking Row 2*/}
-     <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+     <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           2
         </span>
         <Image src={ranking14} alt="Ranking image" />
-        <span className="font-semibold text-[18px] sm:text-[20px] md:text-[22px] leading-[140%] capitalize t-white">
+        <span className="font-semibold text-[18px] sm:text-[20px] md:text-[22px] leading-[140%] capitalize text-white">
           Ruben Carder
         </span>
       </div>
@@ -91,8 +97,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 3*/}
-     <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+     <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           3
         </span>
@@ -110,8 +116,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 4*/}
-     <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+     <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           4
         </span>
@@ -129,8 +135,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 5*/}
-     <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+     <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           5
         </span>
@@ -148,8 +154,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 6*/}
-     <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+     <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           6
         </span>
@@ -167,8 +173,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 7*/}
-     <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+     <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           7
         </span>
@@ -186,8 +192,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 8*/}
-     <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+     <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           8
         </span>
@@ -205,8 +211,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 9*/}
-     <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+     <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           9
         </span>
@@ -224,8 +230,8 @@ export default function Ranking() {
     </div>
  
       {/* Ranking Row 10*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           10
         </span>
@@ -244,8 +250,8 @@ export default function Ranking() {
 
 
       {/* Ranking Row 11*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           11
         </span>
@@ -263,8 +269,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 12*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           12
         </span>
@@ -282,8 +288,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 13*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           13
         </span>
@@ -302,8 +308,8 @@ export default function Ranking() {
 
 
       {/* Ranking Row 14*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           14
         </span>
@@ -322,8 +328,8 @@ export default function Ranking() {
 
 
       {/* Ranking Row 15*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           15
         </span>
@@ -342,8 +348,8 @@ export default function Ranking() {
 
 
       {/* Ranking Row 16*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           16
         </span>
@@ -362,8 +368,8 @@ export default function Ranking() {
 
 
       {/* Ranking Row 17*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist}  className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           17
         </span>
@@ -382,8 +388,8 @@ export default function Ranking() {
 
 
       {/* Ranking Row 18*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           18
         </span>
@@ -401,8 +407,8 @@ export default function Ranking() {
     </div>
 
       {/* Ranking Row 19*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           19
         </span>
@@ -421,8 +427,8 @@ export default function Ranking() {
 
 
       {/* Ranking Row 20*/}
-       <div className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3">
-      <div className="flex items-center gap-3 w-full md:w-auto">
+       <div onClick={handleArtist} className="rounded-[20px] bg-[#3B3B3B] shadow-md h-auto p-4 flex flex-wrap md:flex-nowrap items-center mt-4 gap-y-3 transform transition duration-300 hover:scale-105">
+      <div onClick={handleArtist} className="flex items-center gap-3 w-full md:w-auto cursor-pointer">
         <span className="w-[30px] h-[30px] rounded-full flex justify-center items-center font-mono bg-[#2B2B2B] text-white">
           20
         </span>

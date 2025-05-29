@@ -35,7 +35,7 @@ export default function Banner() {
 
         {/* Button */}
         <div className="mt-4">
-          <button onClick={handleSignUp} className="font-semibold text-[16px] leading-[140%] text-center bg-[#a259ff] rounded-[20px] px-[40px] sm:px-[50px] py-[10px] w-full sm:w-[224px] h-[60px] text-white font-sans tracking-wide flex items-center justify-center gap-2 hover:bg-[#8a40e8] transform transition duration-300 hover:scale-105">
+          <button onClick={handleSignUp} className="font-semibold text-[16px] leading-[140%] text-center bg-[#a259ff] rounded-[20px] px-[40px] sm:px-[50px] py-[10px] w-full sm:w-[224px] h-[60px] text-white font-sans tracking-wide flex items-center justify-center gap-2 hover:bg-[#8a40e8] transform transition duration-300 hover:scale-105 ">
             <span className="text-2xl font-medium">
               <PiRocketLaunchLight />
             </span>
