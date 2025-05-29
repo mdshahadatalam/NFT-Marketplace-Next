@@ -4,6 +4,7 @@ import logo from "@/public/bg/logo.png"
 import { CiYoutube } from "react-icons/ci";
 import { CiTwitter } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
+import Link from 'next/link';
 
 
 
@@ -18,7 +19,10 @@ export default function Footer() {
                  <div className='w-full lg:w-4/12 mt-4'>
                    <Image src={logo} alt='Logo'/>
                    <h4 className='font-normal text-[16px] leading-[140%] text-[#ccc] font-mono my-4'>NFT marketplace UI created with Anima for Figma.</h4>
-                   <span  className='font-normal text-[16px] leading-[140%] text-[#ccc] font-mono'>Join our community</span>
+                          
+                      <Link href={'/createdAccount'} className='no-underline'>
+                         <span  className='font-normal text-[16px] leading-[140%] text-[#ccc] font-mono'>Join our community</span>
+                      </Link>    
                      
                      <div className='d-flex align-items-center gap-2 mt-4'>
                            <span className='text-xl text-[#ccc]'><CiYoutube /></span>
@@ -31,9 +35,9 @@ export default function Footer() {
                  <div className='w-full lg:w-4/12 mt-4'>
                   <h4 className='font-bold text-[22px] leading-[160%] capitalize text-[#fff] tracking-wide'>Explore</h4>
 
-                  <a className='no-underline text-[#ccc] font-normal text-[16px] leading-[140%] font-mono mt-3 d-inline-block' href="">Marketplace</a> <br/>
-                  <a className='no-underline text-[#ccc] font-normal text-[16px] leading-[140%] font-mono mt-3 d-inline-block' href="">Rankings</a> <br />
-                  <a className='no-underline text-[#ccc] font-normal text-[16px] leading-[140%] font-mono mt-3 d-inline-block' href="">Connect a wallet</a>
+                  <Link className='no-underline text-[#ccc] font-normal text-[16px] leading-[140%] font-mono mt-3 d-inline-block' href={"/MarketPlace"}>Marketplace</Link> <br/>
+                  <Link className='no-underline text-[#ccc] font-normal text-[16px] leading-[140%] font-mono mt-3 d-inline-block' href={"/Ranking"}>Rankings</Link> <br />
+                  <Link className='no-underline text-[#ccc] font-normal text-[16px] leading-[140%] font-mono mt-3 d-inline-block' href={"/Wallet"}>Connect a wallet</Link>
                  </div>
 
                  <div className='w-full lg:w-4/12 mt-4'>

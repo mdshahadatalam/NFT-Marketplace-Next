@@ -1,6 +1,11 @@
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
 
+export const metadata = {
+  title: "Market Place",
+  description: "This is a Market place page",
+};
+
 export default function MarketPlace() {
   return (
     <>

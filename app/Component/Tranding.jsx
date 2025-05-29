@@ -27,7 +27,7 @@ export default function Tranding() {
   const route = useRouter()
 
   const handleNFT =()=>{
-      route.push('/NFT')
+      route.push('/NFTMarketPlace')
   }
   const handleArtist =()=>{
     route.push('/Artist')

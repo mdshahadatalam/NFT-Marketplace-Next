@@ -17,6 +17,7 @@ import profile10 from "@/public/profile/profile (10).png";
 import profile11 from "@/public/profile/profile (11).png";
 import profile12 from "@/public/profile/profile (12).png";
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function TopCreator() {
   const route = useRouter()
@@ -39,12 +40,15 @@ export default function TopCreator() {
         </p>
       </div>
 
-      <button className="rounded-[20px] px-8 w-full sm:w-auto h-14 font-semibold text-[16px] text-white border-2 border-[#A259FF] flex items-center justify-center gap-2 hover:bg-[#A259FF] transition-all duration-300">
+     <Link className='no-underline' href={'/Ranking'}>
+        <button className="rounded-[20px] px-8 w-full sm:w-auto h-14 font-semibold text-[16px] text-white border-2 border-[#A259FF] flex items-center justify-center gap-2 hover:bg-[#A259FF] transition-all duration-300">
         <span className="text-xl">
           <PiRocketLaunchDuotone />
         </span>
         View Rankings
       </button>
+     </Link>
+
     </div>
 
     {/* Creator Cards */}

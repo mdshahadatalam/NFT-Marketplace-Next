@@ -8,7 +8,7 @@ export default function loading() {
     
                 <Roller
                    color="rgba(239,229,239,1)"
-                    size={100}
+                    size={90}
                       />
              
     </div>

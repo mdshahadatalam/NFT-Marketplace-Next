@@ -7,6 +7,7 @@ import logo from '../../public/logo.png';
 import Image from "next/image";
 import { PiUserBold } from "react-icons/pi";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 
 
@@ -17,13 +18,6 @@ export default function Navbar() {
       const handleSignUp = ()=>{
            route.push('/createdAccount')
       }
-
-      const handleHome =()=>{
-        route.push('/')
-      }
-      const handleMarketPlace =()=>{
-        route.push('/MarketPlace')
-      }
   return (
      <>
        <section className="bg-[#2B2B2B] py-2">
@@ -31,13 +25,24 @@ export default function Navbar() {
                 <nav className="flex items-center justify-between w-full relative">
 
             {/* logo */}
-            <Image onClick={handleHome} src={logo} alt="logo" className="cursor-pointer"/>
-
+            <Link href="/"> 
+            <Image  src={logo} alt="logo"/>
+              </Link>
             {/* nav menus */}
             <ul className="items-center gap-[20px] text-[16px] text-[#FFFFFF] md:flex hidden ms-auto mt-1 ">
-                <li onClick={handleMarketPlace} className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Marketplace</li>
-                <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Rankings</li>
-                <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Connect a wallet</li>
+                 
+                 <Link className="no-underline text-[#fff]" href={'/MarketPlace'}>
+                   <li  className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Marketplace</li>
+                 </Link>
+                
+
+                <Link href={'/Ranking'} className="no-underline text-[#fff]">
+                  <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Rankings</li>
+                </Link>
+
+                <Link href={'/Wallet'} className="no-underline text-[#fff]">
+                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize font-mono font-semibold text-base tracking-wide leading-[140%] text-center px-2">Connect a wallet</li>
+                </Link>
 
 
                   <div>

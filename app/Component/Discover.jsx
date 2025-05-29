@@ -13,17 +13,15 @@ import avatar3 from "@/public/discover/Avatar (3).png"
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Discover() {
   const route = useRouter()
 
    const handleNFT = () => {
-    route.push('/NFT#scrollTarge')
+    route.push('/NFTMarketPlace')
   };
 
-  const handleMarketPlace =()=>{
-    route.push('/MarketPlace')
-  }
 
   return (
     <>
@@ -34,13 +32,16 @@ export default function Discover() {
                     <h2 className="font-semibold text-[28px] sm:text-[32px] lg:text-[38px] leading-[120%] capitalize text-white">Discover More NFTs</h2>
                     <p className="font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[160%] capitalize text-white mt-2">Explore new trending NFTs</p>
                   </div>
-            
-                  <button onClick={handleMarketPlace} className="rounded-[20px] px-8 font-mono w-full sm:w-auto h-14 font-semibold text-[16px] text-white border-2 border-[#A259FF] flex items-center justify-center gap-2 hover:bg-[#A259FF] transition-all duration-300">
+                
+                <Link className='no-underline' href={'/MarketPlace'}>
+                  <button className="rounded-[20px] px-8 font-mono w-full sm:w-auto h-14 font-semibold text-[16px] text-white border-2 border-[#A259FF] flex items-center justify-center gap-2 hover:bg-[#A259FF] transition-all duration-300">
                     <span className="text-xl">
                       <MdOutlineRemoveRedEye />
                     </span>
                     See All
                   </button>
+                </Link>
+                
                 </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

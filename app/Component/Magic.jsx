@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import avatar from "@/public/bg/Avatar (2).png"
 import Image from 'next/image'
 import { MdOutlineRemoveRedEye } from "react-icons/md";
+import Link from 'next/link';
 
 export default function Magic({ targetHour = 18, targetMinute = 0 }) {
   const [timeLeft, setTimeLeft] = useState('00:00:00');
@@ -42,24 +43,31 @@ export default function Magic({ targetHour = 18, targetMinute = 0 }) {
 <section className="backImage py-16 md:py-24 lg:py-32">
   <div className="container mx-auto px-4">
     <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-0 pt-60">
+
       {/* Left Side (Header) */}
       <div className="w-full lg:w-6/12 space-y-6 text-center lg:text-left">
-        <div className="w-fit mx-auto lg:mx-0 flex items-center gap-3 bg-[#3B3B3B] rounded-[20px] px-4 py-2  transition-all duration-300 scale-100 hover:scale-105 hover:bg-[#A259FF] hover:text-white">
+        <Link href={'/Artist'} className='no-underline cursor-pointer'>
+           <div className="w-fit mx-auto lg:mx-0 flex items-center gap-3 bg-[#3B3B3B] rounded-[20px] px-4 py-2  transition-all duration-300 scale-100 hover:scale-105 hover:bg-[#A259FF] hover:text-white">
           <Image src={avatar} alt="avatar" className="w-6 h-6" />
           <span className="text-white text-sm tracking-wide">Shroomie</span>
         </div>
+        </Link>
 
         <h4 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight capitalize">
           Magic Mashrooms
         </h4>
 
         <div className='d-flex justify-center transition-all duration-300 scale-100 hover:scale-105'>
-            <button className="w-full sm:w-auto h-14 px-8 flex items-center justify-center gap-2 bg-white text-black text-sm sm:text-base font-semibold rounded-[20px] transition-all duration-300 scale-100 hover:scale-105 hover:bg-[#A259FF] hover:text-white">
-          <span className="text-xl text-[#A259FF]">
+           
+           <Link href={'/NFTMarketPlace'} className='no-underline'>
+          <button className="w-full sm:w-auto h-14 px-8 flex items-center justify-center gap-2 bg-white text-black text-sm sm:text-base font-semibold rounded-[20px] transition-all duration-300 scale-100 hover:scale-105 hover:bg-[#A259FF] hover:text-white">
+             <span className="text-xl text-[#A259FF]">
             <MdOutlineRemoveRedEye />
           </span>
           See NFT
         </button>
+           </Link>
+         
         </div>
 
       </div>

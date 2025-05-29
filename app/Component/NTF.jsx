@@ -1,3 +1,4 @@
+
 "use client"
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
@@ -14,8 +15,7 @@ import NFTImg8 from "@/public/NFT/NFT (8).png"
 import NFTImg9 from "@/public/NFT/NFT (9).png"
 import NFTImg10 from "@/public/NFT/NFT (10).png"
 import { IoIosArrowRoundForward } from "react-icons/io";
-
-
+import Link from 'next/link';
 
 export default function NFT({ targetHour = 18, targetMinute = 0 }) {
 
@@ -164,10 +164,14 @@ export default function NFT({ targetHour = 18, targetMinute = 0 }) {
                       <h2 className="font-semibold text-[28px] sm:text-[32px] lg:text-[38px] leading-[120%] capitalize text-white">More from this artist</h2>
                    </div>
                                 
+                
+                <Link className='no-underline' href={'/Artist'}>
                 <button className="rounded-[20px] px-8 font-mono w-full sm:w-auto h-14 font-semibold text-[16px] text-white border-2 border-[#A259FF] flex items-center justify-center gap-2 hover:bg-[#A259FF] transition-all duration-300">
                 <span className="text-xl"><IoIosArrowRoundForward /></span>
                     Go To Artist Page
                 </button>
+                </Link>
+                
             </div>
                   
                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
