@@ -14,6 +14,19 @@ import market10 from "@/public/market/market (10).png"
 import market11 from "@/public/market/market (11).png"
 import market12 from "@/public/market/market (12).png"
 import avatar from "@/public/NFT/Avatar (2).png"
+
+import profile1 from "@/public/market/profile (1).png"
+import profile2 from "@/public/market/profile (2).png"
+import profile3 from "@/public/market/profile (3).png"
+import profile4 from "@/public/market/profile (4).png"
+import profile5 from "@/public/market/profile (5).png"
+import profile6 from "@/public/market/profile (6).png"
+import profile7 from "@/public/market/profile (7).png"
+import profile8 from "@/public/market/profile (8).png"
+import profile9 from "@/public/market/profile (9).png"
+import profile10 from "@/public/market/profile (10).png"
+
+
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
@@ -64,7 +77,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile8} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">Shroomie</span>
                             </div>
                       
@@ -90,7 +103,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile10} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">BeKind2Robots</span>
                             </div>
                       
@@ -116,7 +129,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile10} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">BeKind2Robots</span>
                             </div>
                       
@@ -142,7 +155,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile9} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">Mr Fox</span>
                             </div>
                       
@@ -168,7 +181,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile1} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">Keepitreal</span>
                             </div>
                       
@@ -194,7 +207,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile2} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">Robotica</span>
                             </div>
                       
@@ -220,7 +233,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile3} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">MoonDancer</span>
                             </div>
                       
@@ -246,7 +259,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile4} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">NebulaKid</span>
                             </div>
                       
@@ -272,7 +285,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile10} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">Animakid</span>
                             </div>
                       
@@ -298,7 +311,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile5} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">Catch 22</span>
                             </div>
                       
@@ -324,7 +337,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile6} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">Ice Ape Club</span>
                             </div>
                       
@@ -350,7 +363,7 @@ export default function Market() {
                             </h4>
                       
                             <div className="flex items-center gap-2 mb-4">
-                              <Image src={avatar} alt="avatar image" className="w-6 h-6 rounded-full" />
+                              <Image src={profile7} alt="avatar image" className="w-6 h-6 rounded-full" />
                               <span className="font-normal text-[16px] text-white font-mono">PuppyPower</span>
                             </div>
                       
