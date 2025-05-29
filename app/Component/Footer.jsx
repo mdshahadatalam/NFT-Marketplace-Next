@@ -50,7 +50,7 @@ export default function Footer() {
           <input
             type="text"
             placeholder="Enter your email here"
-            className="w-full h-[54px] md:h-[60px] rounded-[30px] bg-white placeholder:text-black placeholder:text-[14px] md:placeholder:text-[16px] text-black px-6 pr-[150px] md:pr-[180px] outline-none shadow-md"
+            className="w-full h-[54px] md:h-[60px] rounded-[30px] bg-white placeholder:text-slate-500 placeholder:font-sans  placeholder:text-[14px] md:placeholder:text-[16px] text-black px-6 pr-[150px] md:pr-[180px] outline-none shadow-md"
           />
           <button
             style={{ borderRadius: '30px' }}
