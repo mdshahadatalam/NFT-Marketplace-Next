@@ -72,12 +72,15 @@ export default function NFT({ targetHour = 18, targetMinute = 0 }) {
               <span className='font-normal text-[22px] leading-[160%] capitalize text-[#858584] font-mono'>
                 Created By
               </span>
+               
+               <Link href={'/Artist'} className='no-underline'>
               <div className='flex items-center gap-2 mt-2'>
                 <Image src={avatar} alt='avatar image' width={40} height={40} />
                 <span className='font-semibold text-[22px] leading-[140%] capitalize text-[#fff]'>
                   Orbitian
                 </span>
               </div>
+               </Link>
             </div>
 
             {/* Description */}
@@ -116,12 +119,12 @@ export default function NFT({ targetHour = 18, targetMinute = 0 }) {
               </span>
               <div className='mt-4 flex flex-wrap gap-4'>
                 {['Animation', 'Illustration', 'Moon', 'Moon'].map((tag, index) => (
+                  <Link key={index} href={'/MarketPlace'} className='no-underline'>
                   <span
-                    key={index}
-                    className='px-4 h-[46px] flex justify-center items-center bg-[#3B3B3B] font-semibold text-[16px] leading-[140%] uppercase text-[#fff] shadow-md rounded-[20px] transform transition duration-300 hover:scale-105 cursor-pointer'
-                  >
+                    className='px-4 h-[46px] flex justify-center items-center bg-[#3B3B3B] font-semibold text-[16px] leading-[140%] uppercase text-[#fff] shadow-md rounded-[20px] transform transition duration-300 hover:scale-105 cursor-pointer'>
                     {tag}
                   </span>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -61,7 +61,7 @@ export default function CreatedAccount() {
           />
 
           <button
-            className='w-full max-w-md h-[46px] rounded-[20px] px-4 font-semibold text-[16px] text-center bg-[#A259FF] text-white mt-2 transition-transform duration-300 hover:scale-105'>
+            className='w-full max-w-md h-[46px] rounded-[20px] px-4 font-semibold text-[16px] text-center bg-[#A259FF] text-white mt-3 transition-transform duration-300 hover:scale-105'>
             Create account
           </button>
         </form>

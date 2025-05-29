@@ -46,10 +46,9 @@ export default function Navbar() {
 
 
                   <div>
-                  <button onClick={handleSignUp} className="rounded-[20px] px-[25px] w-[142px] h-[60px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
-                    <span><PiUserBold /></span>
-                    Sign Up
-                    </button>
+                    <button onClick={handleSignUp} className="rounded-[20px] px-[25px] w-[142px] h-[60px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
+                      <span><PiUserBold /></span> Sign Up
+                  </button>
 
                   </div>
                   
@@ -62,13 +61,17 @@ export default function Navbar() {
 
                 <CiMenuFries
                     className="text-[1.6rem] text-[#ffff] cursor-pointer md:hidden flex"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}/>
+                    onClick={() => setIsMenuOpen(!isMenuOpen)} />
 
             </div>
 
             {/* mobile sidebar */}
             <aside
-                className={` ${isMenuOpen ? "translate-y-0 opacity-100 z-20" : "translate-y-[200px] opacity-0 z-[-1]"} md:hidden bg-[#3B9DF8] p-4 text-center absolute top-[60px] right-0 w-full sm:w-[300px] rounded-md transition-all duration-300`}>
+                className={` ${isMenuOpen ? "translate-y-0 opacity-100 z-20" : "translate-y-[200px] opacity-0 z-[-1]"} md:hidden bg-black p-4 text-center absolute top-[60px] right-0 w-full sm:w-[300px] rounded-md transition-all duration-300`}>
+
+                 <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="flex justify-center">
+                  <Link href={'/'}><Image src={logo} alt="logo image" className="mb-4 w-[200px]"/></Link>
+                 </div>
 
                 <div className="w-full relative mb-5">
                     <input
@@ -79,12 +82,29 @@ export default function Navbar() {
                 </div>
 
                 <ul className="items-center gap-[20px] text-[1rem] text-white flex flex-col">
-                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">home</li>
-                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-poin ter capitalize">about
-                        us
-                    </li>
-                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">services</li>
+
+                    <Link href={'/MarketPlace'} className="no-underline text-[#fff]" >
+                      <li onClick={() => setIsMenuOpen(!isMenuOpen)} className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">market place</li>
+                    </Link>
+
+                     <Link href={'/Ranking'} className="no-underline text-[#fff]" >
+                        <li onClick={() => setIsMenuOpen(!isMenuOpen)} className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">rankings</li>
+                     </Link>
+
+                     <Link href={'/Wallet'} className="no-underline text-[#fff]" > 
+                        <li onClick={() => setIsMenuOpen(!isMenuOpen)} className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">wallet a connect</li>
+                     </Link>
                 </ul>
+
+                <div className="ms-5">
+
+                   <Link href={'/createdAccount'}>
+                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="rounded-[20px] px-[25px] w-[150px] h-[45px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
+                      <span><PiUserBold /></span> Sign Up
+                    </button>
+                   </Link>
+                   
+                  </div>
 
             </aside>
 
