@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useEffect } from 'react'
 import tranding from '@/public/tran/tranding (2).png';
 import tranding2 from '@/public/tran/tranding (3).png';
 import tranding3 from '@/public/tran/tranding (1).png';
@@ -17,7 +17,8 @@ import robot2 from '@/public/tran/robot (2).png';
 import foxImg from '@/public/tran/fox.png';
 import avatar1 from '@/public/tran/Avatar (1).png';
 import avatar2 from '@/public/tran/Avatar (2).png';
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 import Image from 'next/image';
@@ -32,6 +33,10 @@ export default function Tranding() {
   const handleArtist =()=>{
     route.push('/Artist')
   }
+
+  useEffect( ()=>{
+      Aos.init();
+    })
   return (
     <>
        {/* <section className='bg-[#2B2B2B]'>
@@ -151,12 +156,18 @@ export default function Tranding() {
         
         <div className="flex flex-row gap-2 mt-4">
           <Image
+            data-aos="zoom-in"
+            data-aos-duration="2500"
            onClick={handleNFT}
            src={smallTrn} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
           <Image
+            data-aos="zoom-in"
+            data-aos-duration="2500"
            onClick={handleNFT}
            src={smallTrn3} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
           <Image
+            data-aos="zoom-in"
+            data-aos-duration="2500"
            onClick={handleNFT}
            src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
         </div>
@@ -180,12 +191,18 @@ export default function Tranding() {
 
         <div className="flex flex-row gap-2 mt-4">
           <Image
+           data-aos="zoom-in"
+            data-aos-duration="2500"
             onClick={handleNFT}
            src={masrom1} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
           <Image
+           data-aos="zoom-in"
+            data-aos-duration="2500"
             onClick={handleNFT}
            src={masrom2} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
           <Image
+           data-aos="zoom-in"
+            data-aos-duration="2500"
             onClick={handleNFT}
            src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
         </div>
@@ -209,12 +226,18 @@ export default function Tranding() {
 
         <div className="flex flex-row gap-2 mt-4">
           <Image
+            data-aos="zoom-in"
+            data-aos-duration="2500"
             onClick={handleNFT}
            src={robot1} alt="thumb 1" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
           <Image
+            data-aos="zoom-in"
+            data-aos-duration="2500"
             onClick={handleNFT}
            src={robot2} alt="thumb 2" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
           <Image
+            data-aos="zoom-in"
+            data-aos-duration="2500"
             onClick={handleNFT}
            src={smallTrn2} alt="thumb 3" className="w-1/3 object-cover rounded-lg  transform transition duration-300 hover:scale-105 cursor-pointer" />
         </div>

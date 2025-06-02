@@ -10,7 +10,13 @@ export default function Join() {
       
       {/* Image Section */}
       <div className="w-full lg:w-6/12 flex justify-center">
-        <Image src={photo} alt="photo" className="max-w-full h-auto" />
+        <Image
+         data-aos="zoom-in"
+         data-aos-duration="2500"
+         src={photo}
+         alt="photo" 
+         className="max-w-full h-auto" 
+         />
       </div>
 
       {/* Text + Input Section */}

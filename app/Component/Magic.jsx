@@ -74,7 +74,8 @@ export default function Magic({ targetHour = 18, targetMinute = 0 }) {
 
       {/* Right Side (Countdown Timer) */}
       <div className="w-full lg:w-6/12 flex justify-center lg:justify-end">
-        <div className="w-full max-w-[295px] h-[147px] backdrop-blur-md bg-[#3b3b3b]/50 text-white rounded-[20px] p-4">
+        <div  data-aos="zoom-in"
+            data-aos-duration="1500" className="w-full max-w-[295px] h-[147px] backdrop-blur-md bg-[#3b3b3b]/50 text-white rounded-[20px] p-4">
           <span className="text-xs tracking-wider">Auction ends in:</span>
 
           <div className="flex justify-between items-center mt-2">

@@ -4,8 +4,6 @@ import aniImg from '@/public/ani.gif';
 import Image from "next/image";
 import { PiRocketLaunchLight } from "react-icons/pi";
 import { useRouter } from 'next/navigation';
-
-
 export default function Banner() {
 
  const route = useRouter()
@@ -16,7 +14,6 @@ export default function Banner() {
   const handleSignUp =()=>{
     route.push('/createdAccount')
   }
-
   return (
     <>
 <section className="bg-[#2B2B2B] py-[100px]">

@@ -1,8 +1,39 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image';
 import image from "@/public/signUp/Image.png"
 
 export default function CreatedAccount() {
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState(""); 
+  const [password, setPassword] = useState("");  
+
+    const handleSubmit = async (e)=>{
+      e.preventDefault()
+      try {
+       const res = await fetch("api/register",{
+          method:"POST",
+          headers: {
+            "Content-Type":"application/json",
+          },
+          body:JSON.stringify({
+            userName,email,password
+          })
+        });
+
+      if (res.ok) {
+        const form = e.target;
+        form.reset();
+      } else {
+        console.log("User registration failed.");
+      }
+
+
+      } catch (error) {
+         console.log("Error during registration", error);
+         
+      }  
+    }
   return (
     <>
   <section className='bg-[#2B2B2B] py-12'>
@@ -27,13 +58,15 @@ export default function CreatedAccount() {
           Welcome! Enter your details and start creating, collecting and selling NFTs.
         </p>
 
-        <form action="" className='mt-6 space-y-4'>
+        <form onSubmit={handleSubmit} className='mt-6 space-y-4'>
           <input
             className='w-full max-w-md h-[46px] rounded-[20px] px-4 outline-none placeholder:text-black'
             type="text"
             name="username"
             id="username"
             placeholder='Username'
+            onChange={(e) => setUserName(e.target.value) }
+            value={userName}
           />
 
           <input
@@ -42,6 +75,8 @@ export default function CreatedAccount() {
             name="email"
             id="email"
             placeholder='Email Address'
+            onChange={(e) => setEmail(e.target.value) }
+            value={email}
           />
 
           <input
@@ -50,14 +85,8 @@ export default function CreatedAccount() {
             name="password"
             id="password"
             placeholder='Password'
-          />
-
-          <input
-            className='w-full max-w-md h-[46px] rounded-[20px] px-4 outline-none placeholder:text-black'
-            type="password"
-            name="confirmPassword"
-            id="confirmPassword"
-            placeholder='Confirm Password'
+            onChange={(e) => setPassword(e.target.value) }
+            value={password}
           />
 
           <button
