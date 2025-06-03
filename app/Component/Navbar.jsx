@@ -96,7 +96,7 @@ export default function Navbar() {
                      </Link>
                 </ul>
 
-                <div className="ms-5">
+                <div className="my-2">
 
                    <Link href={'/createdAccount'}>
                         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="rounded-[20px] px-[25px] w-[150px] h-[45px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">

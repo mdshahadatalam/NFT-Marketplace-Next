@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image';
 import image from "@/public/signUp/Image.png"
+import { toast, ToastContainer } from 'react-toastify';
 
 export default function CreatedAccount() {
   const [userName, setUserName] = useState("");
@@ -11,6 +12,35 @@ export default function CreatedAccount() {
     const handleSubmit = async (e)=>{
       e.preventDefault()
       try {
+      
+      const resUserExists = await fetch("api/userExists", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const { user } = await resUserExists.json();
+
+      if (user) {
+        toast.error('user already exist please try another email!', {
+             position: "top-right",
+             autoClose: 5000,
+             hideProgressBar: false,
+             closeOnClick: false,
+             pauseOnHover: true,
+             draggable: true,
+             progress: undefined,
+             theme: "light",
+            //  transition: Bounce,
+             });
+        return;
+      }
+
+
+
+
        const res = await fetch("api/register",{
           method:"POST",
           headers: {
@@ -19,14 +49,34 @@ export default function CreatedAccount() {
           body:JSON.stringify({
             userName,email,password
           })
-        });
+        }).then(() => {
 
-      if (res.ok) {
-        const form = e.target;
-        form.reset();
-      } else {
-        console.log("User registration failed.");
-      }
+           setUserName("");
+            setEmail("");
+            setPassword("");
+          toast.success('User registered successfully!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }).catch((error) => {
+          toast.error('User registration failed!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          console.error("Error during registration:", error);
+        })
 
 
       } catch (error) {
@@ -60,7 +110,7 @@ export default function CreatedAccount() {
 
         <form onSubmit={handleSubmit} className='mt-6 space-y-4'>
           <input
-            className='w-full max-w-md h-[46px] rounded-[20px] px-4 outline-none placeholder:text-black'
+            className='w-full max-w-md h-[46px] rounded-[20px] px-4 outline-none placeholder:text-slate-500'
             type="text"
             name="username"
             id="username"
@@ -70,7 +120,7 @@ export default function CreatedAccount() {
           />
 
           <input
-            className='w-full max-w-md h-[46px] rounded-[20px] px-4 outline-none placeholder:text-black'
+            className='w-full max-w-md h-[46px] rounded-[20px] px-4 outline-none placeholder:text-slate-500'
             type="email"
             name="email"
             id="email"
@@ -80,7 +130,7 @@ export default function CreatedAccount() {
           />
 
           <input
-            className='w-full max-w-md h-[46px] rounded-[20px] px-4 outline-none placeholder:text-black'
+            className='w-full max-w-md h-[46px] rounded-[20px] px-4 outline-none placeholder:text-slate-500'
             type="password"
             name="password"
             id="password"
@@ -99,6 +149,8 @@ export default function CreatedAccount() {
     </div>
   </div>
 </section>
+
+<ToastContainer/>
     </>
   )
 }
