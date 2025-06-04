@@ -1,13 +1,20 @@
 "use client"
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
-import React from 'react'
+import React, { useState } from 'react'
+import { BeatLoader } from "react-spinners";
 
 export default function UserInfo() {
   const {data:session}  = useSession();
+  const [loader,setLoader] = useState(false);
 
   const handleSignOut = () => {
-    signOut({ callbackUrl: '/' });
+    signOut({ callbackUrl: '/' }).then(() => {
+      setLoader(true);
+      setTimeout(() => {
+        setLoader(false);
+      }, 2000); // Simulate a delay for the loader
+    });
   }
    
   
@@ -30,7 +37,9 @@ export default function UserInfo() {
                 onClick={handleSignOut}
                  type="button"
                 className="bg-red-500 text-white px-4 py-2 rounded">
-               Log out
+                  {
+                    loader ? <BeatLoader size={5} color="white" /> :" Log out"
+                  }
               </button>
          </div>
           

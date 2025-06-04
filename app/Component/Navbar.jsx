@@ -23,6 +23,9 @@ export default function Navbar() {
       const handleSignUp = ()=>{
            route.push('/createdAccount')
       }
+      
+      console.log(user);
+      
   return (
      <>
        <section className="bg-[#2B2B2B] py-2">

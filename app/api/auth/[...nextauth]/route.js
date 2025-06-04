@@ -9,7 +9,10 @@ const authOptions = {
     providers: [
         CredentialsProvider({
             name: "credentials",
-             credentials:{},
+             credentials:{
+                      email: { label: "Email", type: "text" },
+                      password: { label: "Password", type: "password" },
+             },
 
 
              async authorize(credentials){
@@ -40,8 +43,8 @@ const authOptions = {
     session :{
       strategy : "jwt",
     },
-    secret : process.env.NEXTAUTH_SECRET,
-    page :{
+    secret : process.env.NETAUTH_SECRET,
+    pages :{
         signIn: "/",
     }
 }

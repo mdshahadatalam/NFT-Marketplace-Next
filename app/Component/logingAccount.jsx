@@ -6,14 +6,17 @@ import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast, ToastContainer } from 'react-toastify';
+import { PropagateLoader } from 'react-spinners';
 
 export default function LogingAccount() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loader, setLoader] = useState(false);
   const route = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoader(true);
 
      try {
        const res = await signIn("credentials",{
@@ -23,6 +26,7 @@ export default function LogingAccount() {
        })
 
        if(res?.error) {
+          setLoader(false);
          console.error("Login failed:", res.error);
              toast.error('Login failed. Please check your credentials', {
              position: "top-right",
@@ -37,11 +41,12 @@ export default function LogingAccount() {
              });
          return;
        }
-        
+        setLoader(false);
         setEmail("");
         setPassword("");
        route.push("/");
      } catch (error) {
+        setLoader(false);
       console.log("Login error:", error);
         toast.error('An error occurred during login. Please try again', {
              position: "top-right",
@@ -105,7 +110,9 @@ export default function LogingAccount() {
      
                <button
                  className='w-full max-w-md h-[46px] rounded-[20px] px-4 font-semibold text-[16px] text-center bg-[#A259FF] text-white mt-3 transition-transform duration-300 hover:scale-105'>
-                 Login
+                 {
+                  loader ? <PropagateLoader size={5} color='white' /> : "Login"
+                 }
                </button>
              </form>
 

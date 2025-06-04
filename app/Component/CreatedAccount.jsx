@@ -5,15 +5,18 @@ import image from "@/public/signUp/Image.png"
 import { toast, ToastContainer } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { PropagateLoader } from 'react-spinners';
 
 export default function CreatedAccount() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState("");
+  const [loader, setLoader] = useState(false);
   const route = useRouter()
 
     const handleSubmit = async (e)=>{
       e.preventDefault()
+      setLoader(true);
       try {
       
       const resUserExists = await fetch("api/userExists", {
@@ -27,6 +30,7 @@ export default function CreatedAccount() {
       const { user } = await resUserExists.json();
 
       if (user) {
+        setLoader(false);
         toast.error('user already exist please try another email!', {
              position: "top-right",
              autoClose: 5000,
@@ -53,8 +57,8 @@ export default function CreatedAccount() {
             userName,email,password
           })
         }).then(() => {
-            
-           route.push("/Login")
+          setLoader(false);
+          route.push("/Login")
            setUserName("");
             setEmail("");
             setPassword("");
@@ -69,6 +73,7 @@ export default function CreatedAccount() {
             theme: "light",
           });
         }).catch((error) => {
+          setLoader(false);
           toast.error('User registration failed!', {
             position: "top-right",
             autoClose: 5000,
@@ -85,6 +90,18 @@ export default function CreatedAccount() {
 
       } catch (error) {
          console.log("Error during registration", error);
+         setLoader(false);
+
+           toast.error('Error during registration', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
          
       }  
     }
@@ -145,7 +162,9 @@ export default function CreatedAccount() {
 
           <button
             className='w-full max-w-md h-[46px] rounded-[20px] px-4 font-semibold text-[16px] text-center bg-[#A259FF] text-white mt-3 transition-transform duration-300 hover:scale-105'>
-            Create account
+              {
+                loader ? <PropagateLoader size={5} color='white' /> : "Create Account"
+              }
           </button>
         </form>
 
