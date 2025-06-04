@@ -109,7 +109,7 @@ export default function LogingAccount() {
                </button>
              </form>
 
-             <p className='font-semibold text-[16px] text-slate-500 leading-[110%] font-mono mt-4'>Don't have a account? <Link href={'/createdAccount'}>Sign Up</Link> </p>
+             <p className='font-semibold text-[16px] text-slate-200 leading-[110%] font-mono mt-4'>Don't have a account? <Link href={'/createdAccount'}>Sign Up</Link> </p>
            </div>
      
          </div>

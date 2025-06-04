@@ -8,12 +8,17 @@ import Image from "next/image";
 import { PiUserBold } from "react-icons/pi";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
+import userImg from '../../public/user/plax.jpg'; // Assuming you have a default user image  
 
 
 
 export default function Navbar() {
       const [isMenuOpen, setIsMenuOpen] = useState(false)
       const route = useRouter()
+
+      const data = useSession();
+      const user = data?.data?.user;
 
       const handleSignUp = ()=>{
            route.push('/createdAccount')
@@ -46,9 +51,16 @@ export default function Navbar() {
 
 
                   <div>
-                    <button onClick={handleSignUp} className="rounded-[20px] px-[25px] w-[142px] h-[60px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
+
+
+                    {
+                      user ? <div className="w-[50px] h-[50px] flex justify-center items-center rounded-full">
+                        <Link href={'/User'}><Image src={userImg} alt="user image" className="w-full h-full rounded-full object-cover" /></Link>
+                      </div> :  <button onClick={handleSignUp} className="rounded-[20px] px-[25px] w-[142px] h-[60px] font-semibold text-base leading-[140%] text-center  bg-[#A259FF] hover:bg-[#8a40e8]  text-white mx-auto   transform transition duration-300 hover:scale-105 align-items-center flex justify-center gap-2">
                       <span><PiUserBold /></span> Sign Up
-                  </button>
+                        </button>
+                    }
+                   
 
                   </div>
                   

@@ -149,7 +149,7 @@ export default function CreatedAccount() {
           </button>
         </form>
 
-           <p className='font-semibold text-[16px] text-slate-500 leading-[110%] font-mono mt-4 text-start'>Have a account? <Link href={'/Login'}>Sign In</Link> </p>
+           <p className='font-semibold text-[16px] text-slate-200 leading-[110%] font-mono mt-4 text-start'>Have a account? <Link href={'/Login'}>Sign In</Link> </p>
       </div>
 
     </div>

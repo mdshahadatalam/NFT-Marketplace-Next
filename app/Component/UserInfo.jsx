@@ -24,7 +24,7 @@ export default function UserInfo() {
            <h1 className='text-2xl font-bold mb-4'>User Information</h1>
               <p className='text-lg'>Welcome to your user profile page!</p>
               {/* <p>Name:{session?.user?.name}</p> */}
-              {/* <p>Email:{session?.user?.email}</p> */}
+              <p>Email:{session?.user?.email}</p>
 
                <button 
                 onClick={handleSignOut}
