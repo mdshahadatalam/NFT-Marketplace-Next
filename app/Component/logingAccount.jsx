@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast, ToastContainer } from 'react-toastify';
 import { PropagateLoader } from 'react-spinners';
+import animation from '@/public/animation/signInAni.json'
+import Lottie from 'lottie-react';
 
 export default function LogingAccount() {
   const [email, setEmail] = useState("");
@@ -70,11 +72,16 @@ export default function LogingAccount() {
      
            {/* Image Section */}
            <div className='w-full lg:w-6/12 flex justify-center lg:justify-start'>
-             <Image 
+             {/* <Image 
                src={image} 
                alt="Sign Up Image" 
                className='shadow-md rounded-md w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full h-auto' 
-             />
+             /> */}
+
+             <Lottie 
+               animationData={animation} 
+               loop={true} 
+               className='w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full h-auto'/>
            </div>
      
            {/* Form Section */}

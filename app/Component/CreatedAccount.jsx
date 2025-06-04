@@ -6,6 +6,8 @@ import { toast, ToastContainer } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { PropagateLoader } from 'react-spinners';
+import animation from '@/public/animation/signUpAni.json' 
+import Lottie from 'lottie-react';
 
 export default function CreatedAccount() {
   const [userName, setUserName] = useState("");
@@ -113,11 +115,15 @@ export default function CreatedAccount() {
 
       {/* Image Section */}
       <div className='w-full lg:w-6/12 flex justify-center lg:justify-start'>
-        <Image 
+        {/* <Image 
           src={image} 
           alt="Sign Up Image" 
           className='shadow-md rounded-md w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full h-auto' 
-        />
+        /> */}
+        <Lottie 
+          animationData={animation} 
+          loop={true} 
+          className='w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full h-auto'/>
       </div>
 
       {/* Form Section */}
