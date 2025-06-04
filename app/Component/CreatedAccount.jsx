@@ -3,11 +3,14 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import image from "@/public/signUp/Image.png"
 import { toast, ToastContainer } from 'react-toastify';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function CreatedAccount() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState(""); 
-  const [password, setPassword] = useState("");  
+  const [password, setPassword] = useState("");
+  const route = useRouter()
 
     const handleSubmit = async (e)=>{
       e.preventDefault()
@@ -50,7 +53,8 @@ export default function CreatedAccount() {
             userName,email,password
           })
         }).then(() => {
-
+            
+           route.push("/Login")
            setUserName("");
             setEmail("");
             setPassword("");
@@ -104,7 +108,7 @@ export default function CreatedAccount() {
         <h4 className='font-semibold text-3xl md:text-4xl lg:text-[51px] leading-[110%] capitalize text-white'>
           Create account
         </h4>
-        <p className='font-normal text-base md:text-lg lg:text-[22px] leading-relaxed capitalize text-white mt-2'>
+        <p className='font-normal text-base md:text-lg lg:text-[22px] leading-relaxed capitalize text-white mt-4'>
           Welcome! Enter your details and start creating, collecting and selling NFTs.
         </p>
 
@@ -144,6 +148,8 @@ export default function CreatedAccount() {
             Create account
           </button>
         </form>
+
+           <p className='font-semibold text-[16px] text-slate-500 leading-[110%] font-mono mt-4 text-start'>Have a account? <Link href={'/Login'}>Sign In</Link> </p>
       </div>
 
     </div>
